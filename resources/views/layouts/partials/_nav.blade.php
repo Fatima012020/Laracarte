@@ -26,7 +26,7 @@
             
           </ul>
         </li>
-        <li><a href="#">Contact</a></li>
+        <li class="{{ set_active_route('contact')}}"><a href="{{ route('contact') }}">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Login</a></li>

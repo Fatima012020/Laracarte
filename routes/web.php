@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PagesController;
 
+use App\Http\Controllers\ContactsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,3 +20,5 @@ use App\Http\Controllers\PagesController;
 Route::get('/', [PagesController::class, 'home'])->name('home');
 
 Route::get('/about', [PagesController::class, 'about'])->name('about');
+
+Route::get('/contact', [ContactsController::class, 'create'])->name('contact');
