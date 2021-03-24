@@ -6,6 +6,7 @@ use App\Http\Controllers\PagesController;
 
 use App\Http\Controllers\ContactsController;
 
+use App\Mail\ContactMessageCreated;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +20,16 @@ use App\Http\Controllers\ContactsController;
 
 Route::get('/', [PagesController::class, 'home'])->name('home');
 
+Route::get('/test-email', function(){
+	return new ContactMessageCreated(
+		'Fatima Thiam', 
+		'faty@gmail.com', 
+		'Merci pour laracarte.'
+	);
+});
+
 Route::get('/about', [PagesController::class, 'about'])->name('about');
 
 Route::get('/contact', [ContactsController::class, 'create'])->name('contact');
+
+Route::post('/contact', [ContactsController::class, 'store'])->name('contact_store');
