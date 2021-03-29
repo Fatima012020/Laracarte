@@ -2,15 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Http\Requests\ContactFormRequest;
-
 use App\Mail\ContactMessageCreated;
-
-use Illuminate\Support\Facades\Mail;
-
 use App\Models\Message;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactsController extends Controller
 {
@@ -28,7 +24,7 @@ class ContactsController extends Controller
 
     	flashy()->success('Nous vous répondrons dans les plus brefs délais!');
 
-    	return redirect()->route('home');
+    	return redirect()->home();
     }
 }
 

@@ -1,4 +1,4 @@
-<footer class="text-center">
+<footer class="text-center py-5">
 
 	<p>
 		&copy; {{ date('Y') }} &middot; {{ config('app.name') }} by <a href="https://twitter.com/FatimaRassoul95">@FatimaRassoul95</a>

@@ -12,7 +12,7 @@
     		<div class="col-md-6">
     			<p class="alert alert-warning">
     				<strong>
-    					<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+    					<i class="fas fa-exclamation-circle"></i>
     					This app has been built by <a href="https://twitter.com/FatimaRassoul95">@FatimaRassoul95</a> for learning purposes.
     				</strong>
     			</p>

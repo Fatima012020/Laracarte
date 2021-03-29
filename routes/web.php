@@ -1,12 +1,11 @@
 <?php
 
+use App\Http\Controllers\ContactsController;
+use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\PagesController;
 
-use App\Http\Controllers\ContactsController;
 
-use App\Mail\ContactMessageCreated;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,17 +17,9 @@ use App\Mail\ContactMessageCreated;
 |
 */
 
-Route::get('/', [PagesController::class, 'home'])->name('home');
+Route::view('/', 'pages.home')->name('home');
 
-Route::get('/test-email', function(){
-	return new ContactMessageCreated(
-		'Fatima Thiam', 
-		'faty@gmail.com', 
-		'Merci pour laracarte.'
-	);
-});
-
-Route::get('/about', [PagesController::class, 'about'])->name('about');
+Route::view('/about', 'pages.about')->name('about');
 
 Route::get('/contact', [ContactsController::class, 'create'])->name('contact');
 
